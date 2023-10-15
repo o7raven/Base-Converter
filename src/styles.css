@@ -1,108 +1,21 @@
-body{
-    background-color: #000000;
-    color: limegreen;
-    margin: 0;
-    padding: 0;
-    font-family: 'Montserrat';font-size: 22px;
-}
 a{
     text-decoration: none;
     color: inherit;
 }
-.link:hover{
-   color: #dbffdb; 
+a:hover{
+    color: #dbffdb;
 }
-.footer{
-    font-size: 1rem;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 4vh;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    align-items: center;
-    justify-items: center;
+body{
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    color:limegreen; 
+    font-family: 'Montserrat';font-size: 22px;
 }
-.header{
-    text-align: center;
+sub{
+    font-size: 50%;
 }
 
-.form__container{
-    display: grid;
-    justify-content: center;
-    height: 70vh;
-    color: white;
-    height: 100%;
-}
-form{
-    background-color: black;
-    text-align: center;
-}
-.grid__container{
-    display: grid;
-    text-align: center;
-    grid-template-columns: 1fr 1fr;
-}
-input{
-    color: inherit;
-    background-color: black;
-    border: none;
-    color: white;
-    height: 40%;
-
-}
-.valNum{
-    text-align: right;
-}
-.toNumSys{
-    display: grid;
-    align-items: center;
-    grid-template-columns: 1fr 2fr;
-}
-.submit_button{
-    background-color: black;
-    color: white;
-    text-align: right;
-    font-size: 3rem;
-    padding: 1rem;
-    margin-top: 2rem;
-}
-.submit_button:hover{
-    cursor: pointer;
-    color: limegreen;
-}
-#num{
-    padding: 0.8rem;
-    width:43%;
-    text-align: center;
-    font-size: 2rem;
-}
-#toSys{
-    font-size: 2rem;
-    height: 70%;
-    margin-left: 1rem;
-    width: 20%;
-}
-.numSys{
-    width: 6%;
-    margin-right: 1rem;
-}
-
-.brackets{
-    font-size: 2rem;
-}
-.baseValue{
-    text-align: center;
-    margin-top: 4rem;
-    font-size: 2rem;
-}
-.baseValue sub{
-    font-size: 1rem;
-}
-input[type="text"]{
-    -webkit-transition: width .35s ease-in-out;
-    transition: width .35s ease-in-out;
-}
 .blinking_cursor{
     animation: blinking_cursor 1s steps(2, start) infinite;
 }
@@ -110,35 +23,64 @@ input[type="text"]{
     to{visibility: hidden;}
 }
 
+.header{
+    font-size: 2rem;
+    display: block;
+    text-align: center;
+}
+.footer{
+    font-size: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 3vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-items: center;
+}
 
 @media only screen and (max-width: 825px){
-    .numSys{
-        width: 8%;
-    }
-    .grid__container{
-        justify-content: center;
-        grid-template-columns: 1fr;
-    }
-    .toNumSys{
-       text-align: center; 
-       justify-items: center;
-       grid-template-columns: 1fr;
-    }
-    .baseValue{
-        margin-top: 0;
-    }
-}
-@media only screen and (max-width: 445px){
     .header{
-    text-align: left;
-    margin-left: 25%;
+        font-size: 1rem;
     }
     .footer{
-        height: 6vh;
-        font-size: .76rem;
-        justify-items: left;
-        margin: 1rem;
-        grid-template-columns: 1fr;
+        font-size: 0.8rem;
     }
-    
+}
+
+@media only screen and (max-width: 450px){
+    .header{
+        font-size: 3vw;
+    }
+}
+.form__container{
+    text-align: center;
+    color: white;
+}
+
+.form__container__grid{
+    display: grid;
+    justify-content: center;
+}
+.form__container__grid label{
+    font-size: 2rem;
+}
+.form__container__grid input{
+    border-radius: 0px;
+    font-size: 1.5rem;
+    color: white;
+    border: rgb(255, 255, 255) 1px solid;
+    background-color: black;
+}
+#submit_button{
+    height: 5vh;
+    border: none;
+    font-size: 1.5rem;
+    color: black;
+    background-color: white;
+}
+#submit_button:hover{
+    cursor: pointer;
+    background-color: rgb(188, 188, 188);
 }
